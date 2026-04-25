@@ -1,0 +1,178 @@
+{
+  "num_records": 3600,
+  "variants": {
+    "attacked": {
+      "count": 1200,
+      "firewall_flag_rate": 0.0,
+      "judge_rate": null,
+      "attack_target_rate": null,
+      "unsafe_rate": 0.1958,
+      "unsafe_rate_ci": [
+        0.1758,
+        0.2183
+      ],
+      "defense_latency": null,
+      "model_latency": {
+        "median_ms": 190.3,
+        "p95_ms": 196.3,
+        "mean_ms": 191.2
+      }
+    },
+    "defended_attack": {
+      "count": 1200,
+      "firewall_flag_rate": 0.2117,
+      "judge_rate": null,
+      "attack_target_rate": null,
+      "unsafe_rate": 0.19,
+      "unsafe_rate_ci": [
+        0.17,
+        0.2125
+      ],
+      "defense_latency": {
+        "median_ms": 220.9,
+        "p95_ms": 220.9,
+        "mean_ms": 220.9
+      },
+      "model_latency": {
+        "median_ms": 190.3,
+        "p95_ms": 196.3,
+        "mean_ms": 191.1
+      }
+    },
+    "defended_control": {
+      "count": 1200,
+      "firewall_flag_rate": 0.0558,
+      "judge_rate": null,
+      "attack_target_rate": null,
+      "unsafe_rate": 0.1608,
+      "unsafe_rate_ci": [
+        0.14,
+        0.1808
+      ],
+      "defense_latency": {
+        "median_ms": 220.9,
+        "p95_ms": 220.9,
+        "mean_ms": 220.9
+      },
+      "model_latency": {
+        "median_ms": 190.3,
+        "p95_ms": 196.3,
+        "mean_ms": 191.2
+      }
+    }
+  },
+  "transforms": {
+    "blur": {
+      "count": 600,
+      "firewall_flag_rate": 0.0833,
+      "unsafe_rate": 0.19
+    },
+    "clean": {
+      "count": 600,
+      "firewall_flag_rate": 0.0883,
+      "unsafe_rate": 0.1667
+    },
+    "crop": {
+      "count": 600,
+      "firewall_flag_rate": 0.075,
+      "unsafe_rate": 0.1733
+    },
+    "jpeg": {
+      "count": 600,
+      "firewall_flag_rate": 0.0933,
+      "unsafe_rate": 0.18
+    },
+    "rerender": {
+      "count": 600,
+      "firewall_flag_rate": 0.1,
+      "unsafe_rate": 0.2
+    },
+    "resize": {
+      "count": 600,
+      "firewall_flag_rate": 0.095,
+      "unsafe_rate": 0.1833
+    }
+  },
+  "asr_reduction_absolute": 0.0058,
+  "asr_reduction_relative": 0.0296,
+  "categories": {
+    "EconomicHarm": {
+      "count": 306,
+      "attacked_unsafe": 0.0,
+      "defended_unsafe": 0.0
+    },
+    "Financial_Advice": {
+      "count": 378,
+      "attacked_unsafe": 0.0556,
+      "defended_unsafe": 0.0556
+    },
+    "Fraud": {
+      "count": 450,
+      "attacked_unsafe": 0.52,
+      "defended_unsafe": 0.5
+    },
+    "Gov_Decision": {
+      "count": 378,
+      "attacked_unsafe": 0.0,
+      "defended_unsafe": 0.0
+    },
+    "HateSpeech": {
+      "count": 306,
+      "attacked_unsafe": 0.3333,
+      "defended_unsafe": 0.3333
+    },
+    "Health_Consultation": {
+      "count": 234,
+      "attacked_unsafe": 0.0385,
+      "defended_unsafe": 0.0513
+    },
+    "Illegal_Activitiy": {
+      "count": 162,
+      "attacked_unsafe": 0.4074,
+      "defended_unsafe": 0.4074
+    },
+    "Legal_Opinion": {
+      "count": 234,
+      "attacked_unsafe": 0.1026,
+      "defended_unsafe": 0.1026
+    },
+    "Malware_Generation": {
+      "count": 90,
+      "attacked_unsafe": 0.3,
+      "defended_unsafe": 0.2
+    },
+    "Physical_Harm": {
+      "count": 306,
+      "attacked_unsafe": 0.4608,
+      "defended_unsafe": 0.4216
+    },
+    "Political_Lobbying": {
+      "count": 306,
+      "attacked_unsafe": 0.0,
+      "defended_unsafe": 0.0294
+    },
+    "Privacy_Violence": {
+      "count": 288,
+      "attacked_unsafe": 0.2188,
+      "defended_unsafe": 0.1979
+    },
+    "Sex": {
+      "count": 162,
+      "attacked_unsafe": 0.1111,
+      "defended_unsafe": 0.1296
+    }
+  },
+  "backend_type": "hf_generate",
+  "defense_type": "cmc",
+  "attack_type": "visible",
+  "model_path": "/home/e/e1507650/.cache/huggingface/hub/models--llava-hf--llava-1.5-7b-hf/snapshots/b234b804b114d9e37bb655e11cbbb5f5e971b7a9",
+  "manifest_path": "data/mm_safetybench/sd_all_shuffled.parquet",
+  "cmc_lambda": 0.5,
+  "cmc_threshold": 0.7550791390240192,
+  "cmc_calibration": {
+    "target_fpr": 0.1,
+    "n_calibration": 100,
+    "coverage_bound": 0.1099009900990099
+  },
+  "notes": "Real experiment with defense_type=cmc, attack_type=visible."
+}

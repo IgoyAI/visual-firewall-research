@@ -1,0 +1,58 @@
+{
+  "num_attack_records": 72,
+  "num_control_records": 72,
+  "clean_asr_proxy": 1.0,
+  "defended_clean_asr_proxy": 0.0833,
+  "transformed_asr_proxy": 0.9333,
+  "defended_transformed_asr_proxy": 0.1333,
+  "control_false_positive_rate": 0.0,
+  "control_benign_retention_after": 0.8194,
+  "gpu_attack_similarity_before": 0.8968,
+  "gpu_attack_similarity_after": 0.9167,
+  "gpu_control_similarity_after": 0.97,
+  "per_transform": {
+    "blur": {
+      "attack_detection_rate": 0.9167,
+      "defended_attack_rate": 0.25,
+      "benign_anchor_retention_after": 0.5833,
+      "gpu_similarity_before": 0.8984,
+      "gpu_similarity_after": 0.917
+    },
+    "clean": {
+      "attack_detection_rate": 1.0,
+      "defended_attack_rate": 0.0833,
+      "benign_anchor_retention_after": 1.0,
+      "gpu_similarity_before": 0.9142,
+      "gpu_similarity_after": 0.937
+    },
+    "crop": {
+      "attack_detection_rate": 0.9167,
+      "defended_attack_rate": 0.0,
+      "benign_anchor_retention_after": 0.0,
+      "gpu_similarity_before": 0.8359,
+      "gpu_similarity_after": 0.8546
+    },
+    "jpeg": {
+      "attack_detection_rate": 0.9167,
+      "defended_attack_rate": 0.0833,
+      "benign_anchor_retention_after": 1.0,
+      "gpu_similarity_before": 0.9037,
+      "gpu_similarity_after": 0.9256
+    },
+    "rerender": {
+      "attack_detection_rate": 1.0,
+      "defended_attack_rate": 0.0833,
+      "benign_anchor_retention_after": 1.0,
+      "gpu_similarity_before": 0.9148,
+      "gpu_similarity_after": 0.9344
+    },
+    "resize": {
+      "attack_detection_rate": 0.9167,
+      "defended_attack_rate": 0.25,
+      "benign_anchor_retention_after": 0.5833,
+      "gpu_similarity_before": 0.9136,
+      "gpu_similarity_after": 0.9319
+    }
+  },
+  "notes": "This is a synthetic OCR-proxy pilot, not a benchmarked MLLM evaluation. Attack success is measured by whether suspicious overlay text survives the image pipeline and remains visible to OCR before and after the firewall. A local SigLIP image encoder is also used across both GPUs to compute image-similarity diagnostics."
+}

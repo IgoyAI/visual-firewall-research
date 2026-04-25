@@ -1,0 +1,94 @@
+{
+  "levy_lemma": {
+    "d": 1152,
+    "n_trials": 200000,
+    "checks": [
+      {
+        "t": 0.05,
+        "empirical_tail": 0.04413,
+        "levy_bound": 0.2369277586821217,
+        "ratio": 0.1862593064040579,
+        "bound_holds": true
+      },
+      {
+        "t": 0.1,
+        "empirical_tail": 0.000335,
+        "levy_bound": 0.0031511115984444384,
+        "ratio": 0.10631169018748,
+        "bound_holds": true
+      },
+      {
+        "t": 0.15,
+        "empirical_tail": 0.0,
+        "levy_bound": 2.352575200009775e-06,
+        "ratio": 0.0,
+        "bound_holds": true
+      },
+      {
+        "t": 0.2,
+        "empirical_tail": 0.0,
+        "levy_bound": 9.859505575991481e-11,
+        "ratio": 0.0,
+        "bound_holds": true
+      }
+    ]
+  },
+  "lipschitz": {
+    "lambda": 0.5,
+    "n_spans": 4,
+    "n_perturbations": 200,
+    "checks": [
+      {
+        "epsilon": 0.01,
+        "worst_observed_delta": 0.000862419605255127,
+        "lipschitz_bound": 0.015,
+        "bound_holds": true,
+        "ratio": 0.0574946403503418
+      },
+      {
+        "epsilon": 0.05,
+        "worst_observed_delta": 0.0050536394119262695,
+        "lipschitz_bound": 0.07500000000000001,
+        "bound_holds": true,
+        "ratio": 0.06738185882568358
+      },
+      {
+        "epsilon": 0.1,
+        "worst_observed_delta": 0.011925816535949707,
+        "lipschitz_bound": 0.15000000000000002,
+        "bound_holds": true,
+        "ratio": 0.07950544357299803
+      },
+      {
+        "epsilon": 0.2,
+        "worst_observed_delta": 0.03075963258743286,
+        "lipschitz_bound": 0.30000000000000004,
+        "bound_holds": true,
+        "ratio": 0.10253210862477619
+      }
+    ]
+  },
+  "dkw_concentration": {
+    "alpha": 0.1,
+    "n_cal": 100,
+    "n_test": 500,
+    "n_repeats": 500,
+    "empirical_mean_fpr": 0.09857200000000002,
+    "empirical_std_fpr": 0.03223415604603291,
+    "beta_predicted_std": 0.030000000000000002,
+    "dkw_check_epsilon": 0.05,
+    "dkw_bound": 1.2130613194252666,
+    "empirical_excess_fraction": 0.018,
+    "dkw_holds": true
+  },
+  "vmf_fit": {
+    "n_spans": 114,
+    "d": 1152,
+    "mean_r_benign": 0.038217537793363524,
+    "mean_r_ref": 0.654702868900801,
+    "kappa_0_benign": 44.09094608079984,
+    "kappa_1_adversarial": 1319.538636259954,
+    "lambda_implied_by_vmf": 0.03341391064210852,
+    "lambda_config": 0.5
+  }
+}

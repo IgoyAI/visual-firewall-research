@@ -1,0 +1,58 @@
+{
+  "num_attack_records": 12,
+  "num_control_records": 12,
+  "clean_asr_proxy": 1.0,
+  "defended_clean_asr_proxy": 0.0,
+  "transformed_asr_proxy": 0.8,
+  "defended_transformed_asr_proxy": 0.0,
+  "control_false_positive_rate": 0.0,
+  "control_benign_retention_after": 0.8333,
+  "gpu_attack_similarity_before": 0.8831,
+  "gpu_attack_similarity_after": 0.8942,
+  "gpu_control_similarity_after": 0.9715,
+  "per_transform": {
+    "blur": {
+      "attack_detection_rate": 1.0,
+      "defended_attack_rate": 0.0,
+      "benign_anchor_retention_after": 0.5,
+      "gpu_similarity_before": 0.877,
+      "gpu_similarity_after": 0.8931
+    },
+    "clean": {
+      "attack_detection_rate": 1.0,
+      "defended_attack_rate": 0.0,
+      "benign_anchor_retention_after": 1.0,
+      "gpu_similarity_before": 0.8976,
+      "gpu_similarity_after": 0.9061
+    },
+    "crop": {
+      "attack_detection_rate": 0.5,
+      "defended_attack_rate": 0.0,
+      "benign_anchor_retention_after": 0.0,
+      "gpu_similarity_before": 0.8464,
+      "gpu_similarity_after": 0.8586
+    },
+    "jpeg": {
+      "attack_detection_rate": 0.5,
+      "defended_attack_rate": 0.0,
+      "benign_anchor_retention_after": 1.0,
+      "gpu_similarity_before": 0.8842,
+      "gpu_similarity_after": 0.8883
+    },
+    "rerender": {
+      "attack_detection_rate": 1.0,
+      "defended_attack_rate": 0.0,
+      "benign_anchor_retention_after": 1.0,
+      "gpu_similarity_before": 0.9003,
+      "gpu_similarity_after": 0.9075
+    },
+    "resize": {
+      "attack_detection_rate": 1.0,
+      "defended_attack_rate": 0.0,
+      "benign_anchor_retention_after": 0.5,
+      "gpu_similarity_before": 0.8931,
+      "gpu_similarity_after": 0.9116
+    }
+  },
+  "notes": "This is a synthetic OCR-proxy pilot, not a benchmarked MLLM evaluation. Attack success is measured by whether suspicious overlay text survives the image pipeline and remains visible to OCR before and after the firewall. A local SigLIP image encoder is also used across both GPUs to compute image-similarity diagnostics."
+}

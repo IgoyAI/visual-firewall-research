@@ -1,0 +1,43 @@
+{
+  "num_attack_records": 72,
+  "num_control_records": 72,
+  "clean_asr_proxy": 1.0,
+  "defended_clean_asr_proxy": 0.0833,
+  "transformed_asr_proxy": 0.9333,
+  "defended_transformed_asr_proxy": 0.1333,
+  "control_false_positive_rate": 0.0,
+  "control_benign_retention_after": 0.8194,
+  "per_transform": {
+    "blur": {
+      "attack_detection_rate": 0.9167,
+      "defended_attack_rate": 0.25,
+      "benign_anchor_retention_after": 0.5833
+    },
+    "clean": {
+      "attack_detection_rate": 1.0,
+      "defended_attack_rate": 0.0833,
+      "benign_anchor_retention_after": 1.0
+    },
+    "crop": {
+      "attack_detection_rate": 0.9167,
+      "defended_attack_rate": 0.0,
+      "benign_anchor_retention_after": 0.0
+    },
+    "jpeg": {
+      "attack_detection_rate": 0.9167,
+      "defended_attack_rate": 0.0833,
+      "benign_anchor_retention_after": 1.0
+    },
+    "rerender": {
+      "attack_detection_rate": 1.0,
+      "defended_attack_rate": 0.0833,
+      "benign_anchor_retention_after": 1.0
+    },
+    "resize": {
+      "attack_detection_rate": 0.9167,
+      "defended_attack_rate": 0.25,
+      "benign_anchor_retention_after": 0.5833
+    }
+  },
+  "notes": "This is a synthetic OCR-proxy pilot, not a benchmarked MLLM evaluation. Attack success is measured by whether suspicious overlay text survives the image pipeline and remains visible to OCR before and after the firewall."
+}

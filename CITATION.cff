@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "Conformal Cross-Modal Firewalls: Calibrated Pre-Model Defenses for Visual Prompt Injection"
+abstract: >
+  A pre-model defense for visual prompt injection that combines OCR span
+  extraction, a two-component SigLIP-based risk score (instruction-match plus
+  clipped image-text inconsistency, derived as a Neyman--Pearson log-likelihood
+  ratio under a von Mises--Fisher embedding model), and inductive conformal
+  calibration of the masking threshold. The conformal calibration provides a
+  distribution-free finite-sample bound on the clean false positive rate.
+authors:
+  - family-names: "Anonymous"
+    given-names: "Authors"
+type: software
+license: MIT
+repository-code: "https://github.com/IgoyAI/visual-firewall-research"
+keywords:
+  - visual prompt injection
+  - multimodal large language models
+  - conformal prediction
+  - safety
+  - SigLIP
+preferred-citation:
+  type: conference-paper
+  title: "Conformal Cross-Modal Firewalls: Calibrated Pre-Model Defenses for Visual Prompt Injection"
+  authors:
+    - family-names: "Anonymous"
+      given-names: "Authors"
+  conference:
+    name: "Submitted to NeurIPS 2026"
+  year: 2026

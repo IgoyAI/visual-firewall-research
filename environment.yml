@@ -1,0 +1,36 @@
+# Conda environment for visual-firewall-research.
+# For exact pinned versions used in the paper experiments, prefer
+# `pip install -r requirements.txt` after creating the env.
+#
+# Create:  conda env create -f environment.yml
+# Update:  conda env update -f environment.yml --prune
+
+name: visual-firewall
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.13
+  - pip
+  # System tooling
+  - tesseract
+  # PyTorch (CUDA wheel preferred from pip; the conda one is a fallback)
+  - pytorch::pytorch=2.8
+  - pytorch::torchvision
+  - pytorch::pytorch-cuda=12.4
+  # Heavy native deps better installed via conda
+  - opencv
+  - scikit-image
+  - matplotlib
+  # Numerics
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  # Notebooks (optional)
+  - jupyterlab
+  - ipykernel
+  # Pip layer — pinned in requirements.txt for reproducibility
+  - pip:
+      - -r requirements.txt
