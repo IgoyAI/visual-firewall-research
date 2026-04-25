@@ -34,7 +34,10 @@ hf_cache/
 .claude/
 graphify-out/
 
-# LaTeX build artifacts
+# Paper source — kept local, excluded from public/shared repo
+paper/
+
+# LaTeX build artifacts (in case paper/ is ever re-added)
 paper/*.aux
 paper/*.bbl
 paper/*.blg

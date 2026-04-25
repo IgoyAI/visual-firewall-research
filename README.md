@@ -78,7 +78,6 @@ gated (Llama-Guard, Gemma 4) — accept the licenses on HuggingFace and run
 │   ├── <run>/summary.json    # committed; aggregator reads these
 │   ├── <run>/records.csv     # gitignored (heavy)
 │   └── aggregated/*.md       # paper-ready tables, regenerable
-├── paper/                    # NeurIPS-style LaTeX source + figures
 ├── scripts/
 │   ├── setup.sh              # env + data + models
 │   ├── smoke_test.sh         # ~3 min sanity check
